@@ -75,4 +75,4 @@ Use the default email : **admin@app.com** and password : **password**
 
 ## License
 
-BTC Portfolio is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT)
