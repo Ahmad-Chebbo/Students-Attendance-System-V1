@@ -25,7 +25,7 @@ class StoreSubjectRequest extends FormRequest
     {
         return [
             'name' => ['required', 'max:255', 'unique:subjects'],
-            'description' => ['string']
+            'description' => ['string'],
         ];
     }
 }

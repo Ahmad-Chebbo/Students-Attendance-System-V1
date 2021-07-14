@@ -22,7 +22,7 @@
                         aria-expanded="false">
                         <div class="media align-items-center">
                             <span class="avatar avatar-sm rounded-circle">
-                                <img alt="Image placeholder" src="https://picsum.photos/200">
+                                <img alt="Image placeholder" src="{{ asset(Config::get('settings.site_logo')) }}" onerror="this.onerror=null;this.src='https://picsum.photos/200';">
                             </span>
                             <div class="media-body  ml-2  d-none d-lg-block">
                                 <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
@@ -33,9 +33,9 @@
                         <div class="dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Welcome!</h6>
                         </div>
-                        <a href="" class="dropdown-item">
-                            <i class="ni ni-single-02"></i>
-                            <span>My profile</span>
+                        <a href="{{ route('settings.index') }}" class="dropdown-item">
+                            <i class="ni ni-settings"></i>
+                            <span>Settings</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="{{ route('logout') }}" class="dropdown-item"

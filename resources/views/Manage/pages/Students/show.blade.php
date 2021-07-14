@@ -31,7 +31,7 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body text-center bg-gray-100 radius shadow-2xl">
-                            <img src="https://picsum.photos/200"
+                            <img src="{{ asset(Config::get('settings.site_logo')) }}" onerror="this.onerror=null;this.src='https://picsum.photos/200';"
                                  class="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                                  style="width: 140px;" alt="">
                             <h1 class="mt-4">{{ $student->name }}</h1>

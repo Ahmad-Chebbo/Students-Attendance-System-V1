@@ -15,13 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Ahmad Chebbo',
-            'email' => 'admin@app.com',
-            'email_verified_at' => Carbon::now(),
-            'password' => bcrypt('password'),
-            'role' => 'Admin'
-        ]);
+        if (!User::where('email', 'admin@app.com')->exists()) {
+            User::create([
+                'name' => 'Ahmad Chebbo',
+                'email' => 'admin@app.com',
+                'email_verified_at' => Carbon::now(),
+                'password' => bcrypt('password'),
+                'role' => 'Admin'
+            ]);
+        }
+        $this->call(SettingSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

@@ -7,6 +7,7 @@ use App\Http\Requests\Subject\StoreSubjectRequest;
 use App\Http\Requests\Subject\UpdateSubjectRequest;
 use App\Models\Subject;
 use App\Models\Student;
+use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -21,8 +22,9 @@ class SubjectController extends BaseController
      */
     public function index(){
         $this->setPageTitle('Courses', 'All Courses');
-        $subjects = Subject::withCount('students')->get();
-        return view('Manage.pages.Subject.index', compact('subjects'));
+        $users = User::all();
+        $subjects = Subject::withCount('students')->with('teacher')->get();
+        return view('Manage.pages.Subject.index', compact('subjects', 'users'));
     }
 
     /**

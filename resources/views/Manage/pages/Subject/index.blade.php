@@ -44,7 +44,7 @@
                                 <thead class="thead-light">
                                 <tr>
                                     <th scope="col" class="sort" data-sort="name">Name</th>
-                                    <th scope="col" class="sort" data-sort="description">Description</th>
+                                    <th scope="col" class="sort" data-sort="teacher">Description</th>
                                     <th scope="col" class="sort" data-sort="students">Students Number</th>
                                     <th scope="col" class="sort" data-sort="action">Action</th>
                                 </tr>
@@ -56,7 +56,7 @@
                                             {{ $subject->name }}
                                         </td>
                                         <td class="text-capitalize">
-                                            {{ $subject->description }}
+                                            {{ Str::limit($subject->description, 30, "...") }}
                                         </td>
                                         <td class="text-capitalize">
                                             {{ $subject->students_count }}

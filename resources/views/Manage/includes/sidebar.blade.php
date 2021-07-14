@@ -4,7 +4,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <h2 class="text-white">Attendance System</h2>
+                <h2 class="text-white">{{ Config::get('settings.site_name') }}</h2>
             </a>
         </div>
         <hr class="my-1">
@@ -26,14 +26,6 @@
                     </h6>
                     <!-- End Heading -->
                     <!-- Action -->
-                    <!-- Add Teachers -->
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link {{ (request()->is('manage/user*')) ? 'active' : '' }}" href="">--}}
-{{--                            <i class="fas fa-chalkboard-teacher text-primary"></i>--}}
-{{--                            <span class="nav-link-text">Teachers</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-                    <!-- End Teachers -->
                     <!-- Add Students -->
                     <li class="nav-item">
                         <a class="nav-link {{ (request()->is('manage/student*')) ? 'active' : '' }}" href="{{ route('student.index') }}">
@@ -55,6 +47,14 @@
                         <a class="nav-link {{ (request()->is('manage/attendance*')) ? 'active' : '' }}" href="{{ route('attendance.index') }}">
                             <i class="fas fa-calendar-alt text-primary"></i>
                             <span class="nav-link-text">Attendance</span>
+                        </a>
+                    </li>
+                    <!-- End Attendance -->
+                    <!-- Add Attendance -->
+                    <li class="nav-item">
+                        <a class="nav-link {{ (request()->is('manage/setting*')) ? 'active' : '' }}" href="{{ route('settings.index') }}">
+                            <i class="ni ni-settings text-primary"></i>
+                            <span class="nav-link-text">Setting</span>
                         </a>
                     </li>
                     <!-- End Attendance -->

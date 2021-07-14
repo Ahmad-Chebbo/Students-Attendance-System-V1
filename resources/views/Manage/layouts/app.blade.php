@@ -5,8 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#FFFFFF" />
+    <meta name="author" content="Ahmad Chebbo">
+    <meta name="keywords" content="{{ Config::get('settings.seo_meta_title') }}">
+    <meta name="description" content="{{ Config::get('settings.seo_meta_description') }}">
+    <meta name="keywords" content="{{ Config::get('settings.seo_meta_keywords') }}">
     <!-- Favicon -->
-    <link rel="icon" href="https://picsum.photos/200" type="image/png">
+    <link rel="icon" href="{{ asset(Config::get('settings.site_favicon')) }}" type="image/png">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fonts -->
@@ -24,7 +28,12 @@
     <link rel="stylesheet" href="{{ asset('Manage/css/argon.css?v=1.2.0')}}" type="text/css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('Manage/css/custom.css')}}" type="text/css">
-    <title>Attendance System - {{ $subTitle }}</title>
+    <title>{{ Config::get('settings.site_name') }} - {{ $subTitle }}</title>
+    <style>
+        :root {
+            --primary: {{ Config::get('settings.dashboard_color') }};
+        }
+    </style>
 </head>
 <body class="text-gray-800 antialiased">
 

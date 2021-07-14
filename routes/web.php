@@ -46,5 +46,9 @@ Route::group(['middleware' => 'role:Admin','namespace' => 'Manage', 'prefix' => 
     Route::put('attendance/attach/{attendance}/update', 'AttendanceController@updateAttendanceData')->name('attendance.student.update');
     // Attendance Resources
     Route::resource('attendance', 'AttendanceController');
+
+    // Settings
+    Route::get('/settings', 'SettingController@index')->name('settings.index');
+    Route::post('/settings', 'SettingController@update')->name('settings.update');
 });
 
