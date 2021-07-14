@@ -62,14 +62,14 @@
                                                         <div class="custom-control custom-radio d-inline mr-2">
                                                             <input type="radio" id="radio-{{ $student->id }}-on"
                                                                    name="status[{{ $student->id }}]" value="on"
-                                                                   class="custom-control-input" {{ $student->pivot->status === 1 ? 'checked' : '' }}>
+                                                                   class="custom-control-input" {{ $student->pivot->status == 1 ? 'checked' : '' }}>
                                                             <label class="custom-control-label"
                                                                    for="radio-{{ $student->id }}-on">Present</label>
                                                         </div>
                                                         <div class="custom-control custom-radio d-inline">
                                                             <input type="radio" id="radio-{{ $student->id }}-off"
                                                                    name="status[{{ $student->id }}]" value="off"
-                                                                   class="custom-control-input" {{ $student->pivot->status === 0 ? 'checked' : '' }}>
+                                                                   class="custom-control-input" {{ $student->pivot->status == 0 ? 'checked' : '' }}>
                                                             <label class="custom-control-label"
                                                                    for="radio-{{ $student->id }}-off">Absent</label>
                                                         </div>

@@ -61,7 +61,7 @@ class AttendanceController extends BaseController
      */
     public function attachStudents(Attendance $attendance, Request $request): RedirectResponse
     {
-        if ($request->get('status') === null) {
+        if ($request->get('status') == null) {
             $attendance->delete();
             alert('Oops', "You didn't take any attendance. Try again and fill all entries please", 'error');
         }
