@@ -8,7 +8,7 @@ Education institutions need reliable and effective student attendance systems to
 -   Keep track of presence and absence of each student
 -   Start new attendance with only one click 
 -   User Friendly.
--   Custom Css or Js.
+-   Custom Css & Js.
 -   Laravel 8.x.
 
 ## Developing
